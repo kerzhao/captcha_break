@@ -18,35 +18,34 @@ print path
 
 root, dirs, files = os.walk(path).next()
 
-def getAllImages(path):
-    cnt = len(files)
-    X = np.zeros((cnt, height, width, 1), dtype=np.uint8)
+def getAllImages(root, files):
+    X = np.zeros((height, width, 1), dtype=np.uint8)
     y = []
     for i, j in enumerate(files):
         #X[i] = cv2.imread(root+'/'+j)
         img = cv2.imread(root+'/'+j)
         blur = cv2.bilateralFilter(img, 9, 75, 75)
         grayimg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        X[i] = grayimg.reshape((height, width, 1))
+        X = grayimg.reshape((height, width, 1))
         y.append(j[:4])
-    return X, y
+        yield X, y
 
-allX, ally = getAllImages(path)
-
-def gen(batch_size=8):
+def gen(root, files, batch_size=8):
     X = np.zeros((batch_size, height, width, 1), dtype=np.uint8)
     y = [np.zeros((batch_size, n_class), dtype=np.uint8) for i in range(n_len)]
     cnt = 0
+    genimages = getAllImages(root, files)
     while True:
         for i in range(batch_size):
-            X[i] = allX[cnt]
-            for j, ch in enumerate(ally[cnt]):
+            try:
+                allX, ally = genimages.next()
+            except:
+                genimages = getAllImages(root, files)
+                allX, ally = genimages.next()
+            X[i] = allX
+            for j, ch in enumerate(ally):
                 y[j][i, :] = 0
                 y[j][i, chars.find(ch)] = 1
-            if cnt >= len(files) - 1:
-                cnt = 0
-            else:
-                cnt += 1
         yield X, y
         
 from keras.models import *
@@ -80,15 +79,15 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adadelta',
               metrics=['accuracy'])
 
-model.fit_generator(gen(), steps_per_epoch=2000, epochs=300,
-                    validation_data=gen(), validation_steps=50)
+model.fit_generator(gen(root, files), steps_per_epoch=2000, epochs=300,
+                    validation_data=gen(root, files), validation_steps=50)
 
 model.save('mycnn.h5')
 
 from tqdm import tqdm
 def evaluate(model, batch_num=20):
     batch_acc = 0
-    generator = gen()
+    generator = gen(root, files)
     for i in tqdm(range(batch_num)):
         X, y = generator.next()
         y_pred = model.predict(X)
