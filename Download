@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="KEYWORDS" content="Download" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/index.php?title=Download&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://creativecommons.org/licenses/by/2.5/cn/" />
+    <title>Download - OpenCV China ：图像处理,计算机视觉库,Image Processing, Computer Vision</title>
+    <style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/skins/opencv/main.css"; /*]]>*/</style>
+    <style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/theme/index.css"; /*]]>*/</style>
+    <link rel="stylesheet" type="text/css" media="print" href="/skins/common/commonPrint.css" />
+    <!--[if lt IE 5.5000]><style type="text/css">@import "/skins/opencv/IE50Fixes.css";</style><![endif]-->
+    <!--[if IE 5.5000]><style type="text/css">@import "/skins/opencv/IE55Fixes.css";</style><![endif]-->
+    <!--[if IE 6]><style type="text/css">@import "/skins/opencv/IE60Fixes.css";</style><![endif]-->
+    <!--[if IE 7]><style type="text/css">@import "/skins/opencv/IE70Fixes.css";</style><![endif]-->
+    <!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js"></script>
+    <meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+    <script type="text/javascript" src="/index.php?title=-&amp;action=raw&amp;gen=js"></script>    <script type="text/javascript" src="/skins/common/wikibits.js"></script>
+    <style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Opencv.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>              </head>
+  <body                 class="ns-0 Download">
+    <div id="globalWrapper">
+	<div id="AllHeaders">
+ 	<div id="globalHeader">
+	 	<div id="opencv-header-about-btn"><a href="/index.php/Wikipedia:%E5%85%B3%E4%BA%8E" title="关于本站"> </a></div>
+		<div id="opencv-header-help-btn"><a href="/index.php/Wikipedia:%E5%B8%AE%E5%8A%A9" title="编辑帮助"> </a></div>
+
+		<div id="opencv-header-download-btn"><a href="/index.php/Download" title="Download"> </a></div>
+
+	</div>
+
+
+	<div id="title-header-bar">
+		<table width=100% cellspacing="0" cellpadding="10" border="0"><tr height=30px>
+			<td align=left valign="top">
+				<a  href="/index.php/%E9%A6%96%E9%A1%B5" title="首页" id="site-logo"><img src="/theme/images/site_logo.gif" height="30px" border="0"></a>
+			</td>
+			<td width=270px align=right>
+			<form action="/index.php/%E7%89%B9%E6%AE%8A:Search" id="searchform">
+
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="搜索文档" />
+			</form>
+			</td>
+			<td width=270px align=left>
+			<form action="/forum/search.php" method="post" id="searchform" style="padding:0 0 0 14px;">
+				<input name="keywords" id="searchInput" type="text" maxlength="128" value="" /> 
+				<input class="searchButton" value="搜索论坛" type="submit" />
+			</form>
+
+			</td>
+			</tr></table>
+	</div>
+
+	<div id="header-navbar"><div id="bar"><div>
+		<ul id="site-subtitle">
+			<li>Open Source Computer Vision Library</li>
+		</ul>
+
+		<ul>
+			<li class="btn-blank"><span></span></li>
+			<li class="btn-forum"><span><a href="http://www.opencv.org.cn/forum.php"><strong>论坛</strong></a></span></li>
+			<li class="btn-business"><span><a href="/index.php/Template:Business"><strong>商业</strong></a></span></li>
+			<li class="btn-topic"><span><a href="/index.php/Template:Topic"><strong>专题</strong></a></span></li>
+			<li class="btn-lecture"><span><a href="/index.php/Template:Lecture"><strong>讲座</strong></a></span></li>
+			<li class="btn-code"><span><a href="/index.php/Template:Code"><strong>例程</strong></a></span></li>
+			<li class="btn-install"><span><a href="/index.php/Template:Install"><strong>安装</strong></a></span></li>
+			<li class="btn-faq"><span><a href="/index.php/Template:FAQ"><strong>常见问题</strong></a></span></li>
+			<li class="btn-doc"><span><a href="/index.php/Template:Doc"><strong>函数说明</strong></a></span></li>
+		</ul>
+	</div></div></div>
+</div>
+
+      <div id="column-content">
+
+	<div id="content">
+	  <a name="top" id="top"></a>
+	  	  <h1 class="firstHeading">Download</h1>
+	  <div id="bodyContent">
+<!--Google Adsense Begin-->
+<!--Google Adsense End-->
+	    <h3 id="siteSub">Wikipedia，自由的百科全书</h3>
+	    <div id="contentSub"></div>
+	    	    	    <!-- start content -->
+	    <table id='toc' class='toc'><tr><td><div id='toctitle'><h2>目录</h2></div>
+<ul>
+<li class='toclevel-1'><a href="#OpenCV_.E4.B8.8B.E8.BD.BD"><span class="tocnumber">1</span> <span class="toctext">OpenCV 下载</span></a>
+<ul>
+<li class='toclevel-2'><a href="#Version_2.4.4"><span class="tocnumber">1.1</span> <span class="toctext">Version 2.4.4</span></a></li>
+<li class='toclevel-2'><a href="#Version_2.4.3"><span class="tocnumber">1.2</span> <span class="toctext">Version 2.4.3</span></a></li>
+<li class='toclevel-2'><a href="#Version_2.3.1"><span class="tocnumber">1.3</span> <span class="toctext">Version 2.3.1</span></a></li>
+<li class='toclevel-2'><a href="#Version_2.3"><span class="tocnumber">1.4</span> <span class="toctext">Version 2.3</span></a></li>
+<li class='toclevel-2'><a href="#Version_2.2"><span class="tocnumber">1.5</span> <span class="toctext">Version 2.2</span></a></li>
+<li class='toclevel-2'><a href="#Version_2.1"><span class="tocnumber">1.6</span> <span class="toctext">Version 2.1</span></a></li>
+<li class='toclevel-2'><a href="#Version_2.0_.282009.E5.B9.B410.E6.9C.881.E6.97.A5.E5.8F.91.E5.B8.83.EF.BC.8C.E5.8A.9F.E8.83.BD.E5.A4.A7.E5.B9.85.E5.BA.A6.E5.A2.9E.E5.BC.BA.29"><span class="tocnumber">1.7</span> <span class="toctext">Version 2.0 (2009年10月1日发布，功能大幅度增强)</span></a></li>
+<li class='toclevel-2'><a href="#Version_1.2.0_.282.0_beta.29"><span class="tocnumber">1.8</span> <span class="toctext">Version 1.2.0 (2.0 beta)</span></a></li>
+<li class='toclevel-2'><a href="#CVS_2007-06-27"><span class="tocnumber">1.9</span> <span class="toctext">CVS 2007-06-27</span></a></li>
+<li class='toclevel-2'><a href="#Version_1.0"><span class="tocnumber">1.10</span> <span class="toctext">Version 1.0</span></a></li>
+<li class='toclevel-2'><a href="#Version_1.0_rc1_.280.9.9.29"><span class="tocnumber">1.11</span> <span class="toctext">Version 1.0 rc1 (0.9.9)</span></a></li>
+<li class='toclevel-2'><a href="#Version_Beta_5_.280.9.7.29"><span class="tocnumber">1.12</span> <span class="toctext">Version Beta 5 (0.9.7)</span></a></li>
+<li class='toclevel-2'><a href="#Version_Beta_4_.280.9.6.29"><span class="tocnumber">1.13</span> <span class="toctext">Version Beta 4 (0.9.6)</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#chm.E6.A0.BC.E5.BC.8F.E6.96.87.E6.A1.A3"><span class="tocnumber">2</span> <span class="toctext">chm格式文档</span></a></li>
+</ul>
+</td></tr></table>
+<p><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "显示"; var tocHideText = "隐藏"; showTocToggle(); } </script>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=1" title="Download">编辑</a>]</div><a name="OpenCV_.E4.B8.8B.E8.BD.BD"></a><h1>OpenCV 下载</h1>
+<p>安装请参考<a href="/index.php/Template:Install" title="Template:Install">安装文档</a>
+</p><p>如果下载较慢，请到官方网站下载：<a href="http://sourceforge.net/projects/opencvlibrary/files/" class='external free' title="http://sourceforge.net/projects/opencvlibrary/files/" rel="nofollow">http://sourceforge.net/projects/opencvlibrary/files/</a>
+（开发中的源代码位于 <a href="https://github.com/itseez/opencv" class='external free' title="https://github.com/itseez/opencv" rel="nofollow">https://github.com/itseez/opencv</a> ）
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=2" title="Download">编辑</a>]</div><a name="Version_2.4.4"></a><h2>Version 2.4.4</h2>
+<ul><li><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.4/OpenCV-2.4.4.exe/download" class='external text' title="http://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.4/OpenCV-2.4.4.exe/download" rel="nofollow">OpenCV for Windows</a>
+</li><li><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.4/OpenCV-2.4.4a.tar.bz2/download" class='external text' title="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.4/OpenCV-2.4.4a.tar.bz2/download" rel="nofollow">OpenCV for Linux/Mac</a>
+</li><li><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-android/2.4.4/OpenCV-2.4.4-android-sdk.zip/download" class='external text' title="http://sourceforge.net/projects/opencvlibrary/files/opencv-android/2.4.4/OpenCV-2.4.4-android-sdk.zip/download" rel="nofollow">OpenCV for Android</a>
+</li><li><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-ios/2.4.4/opencv2.framework.zip/download" class='external text' title="http://sourceforge.net/projects/opencvlibrary/files/opencv-ios/2.4.4/opencv2.framework.zip/download" rel="nofollow">OpenCV for iOS</a>
+</li></ul>
+<p><br />
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=3" title="Download">编辑</a>]</div><a name="Version_2.4.3"></a><h2>Version 2.4.3</h2>
+<ul><li><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.3/OpenCV-2.4.3.exe/download" class='external text' title="http://sourceforge.net/projects/opencvlibrary/files/opencv-win/2.4.3/OpenCV-2.4.3.exe/download" rel="nofollow">OpenCV for Windows</a>
+</li><li><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.3/OpenCV-2.4.3.tar.bz2/download" class='external text' title="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.3/OpenCV-2.4.3.tar.bz2/download" rel="nofollow">OpenCV for Linux/Mac</a>
+</li><li><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-android/2.4.3/OpenCV-2.4.3-android-sdk.zip/download" class='external text' title="http://sourceforge.net/projects/opencvlibrary/files/opencv-android/2.4.3/OpenCV-2.4.3-android-sdk.zip/download" rel="nofollow">OpenCV for Android</a>
+</li><li><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-ios/2.4.3/opencv2.framework.zip/download" class='external text' title="http://sourceforge.net/projects/opencvlibrary/files/opencv-ios/2.4.3/opencv2.framework.zip/download" rel="nofollow">OpenCV for iOS</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=4" title="Download">编辑</a>]</div><a name="Version_2.3.1"></a><h2>Version 2.3.1</h2>
+<ul><li><a href="http://www.opencv.org.cn/download/OpenCV-2.3.1-win-superpack.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.3.1-win-superpack.exe" rel="nofollow">OpenCV for Windows，superpack</a>
+</li><li><a href="http://www.opencv.org.cn/download/OpenCV-2.3.1a.tar.bz2" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.3.1a.tar.bz2" rel="nofollow">OpenCV for Linux</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=5" title="Download">编辑</a>]</div><a name="Version_2.3"></a><h2>Version 2.3</h2>
+<ul><li><a href="http://www.opencv.org.cn/download/OpenCV-2.3.0-win-src.zip" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.3.0-win-src.zip" rel="nofollow">OpenCV for Windows，源代码需编译</a>
+</li><li><a href="http://www.opencv.org.cn/download/OpenCV-2.3.0-gpu-support-win32-vs2008.zip" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.3.0-gpu-support-win32-vs2008.zip" rel="nofollow">OpenCV for Windows(已使用VC2008编译，支持GPU运算)</a>
+</li><li><a href="http://www.opencv.org.cn/download/OpenCV-2.3.0-win-superpack.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.3.0-win-superpack.exe" rel="nofollow">OpenCV for Windows，superpack</a>
+</li><li><a href="http://www.opencv.org.cn/download/OpenCV-2.3.0.tar.bz2" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.3.0.tar.bz2" rel="nofollow">OpenCV for Linux</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=6" title="Download">编辑</a>]</div><a name="Version_2.2"></a><h2>Version 2.2</h2>
+<ul><li><a href="http://www.opencv.org.cn/download/OpenCV-2.2.0-win.zip" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.2.0-win.zip" rel="nofollow">OpenCV for Windows</a>
+</li><li><a href="http://www.opencv.org.cn/download/OpenCV-2.2.0-win32-vs2010.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.2.0-win32-vs2010.exe" rel="nofollow">OpenCV for Windows(VC2010专用版)</a>
+</li><li><a href="http://www.opencv.org.cn/download/OpenCV-2.2.0.tar.bz2" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.2.0.tar.bz2" rel="nofollow">OpenCV for Linux</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=7" title="Download">编辑</a>]</div><a name="Version_2.1"></a><h2>Version 2.1</h2>
+<ul><li><a href="http://www.opencv.org.cn/download/OpenCV-2.1.0-win.zip" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.1.0-win.zip" rel="nofollow">OpenCV for Windows</a>(<a href="/index.php/VC_2008_Express%E4%B8%8B%E5%AE%89%E8%A3%85OpenCV2.0/2.1" title="VC 2008 Express下安装OpenCV2.0/2.1">安装文档</a>)
+</li><li><a href="http://www.opencv.org.cn/download/OpenCV-2.1.0-win32-vs2008.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.1.0-win32-vs2008.exe" rel="nofollow">OpenCV for Windows(VC2008专用版)</a>
+</li><li><a href="http://www.opencv.org.cn/download/OpenCV-2.1.0.tar.bz2" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.1.0.tar.bz2" rel="nofollow">OpenCV for Linux</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=8" title="Download">编辑</a>]</div><a name="Version_2.0_.282009.E5.B9.B410.E6.9C.881.E6.97.A5.E5.8F.91.E5.B8.83.EF.BC.8C.E5.8A.9F.E8.83.BD.E5.A4.A7.E5.B9.85.E5.BA.A6.E5.A2.9E.E5.BC.BA.29"></a><h2>Version 2.0 (2009年10月1日发布，功能大幅度增强)</h2>
+<ul><li><a href="http://www.opencv.org.cn/download/OpenCV-2.0.0a-win32.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.0.0a-win32.exe" rel="nofollow">OpenCV for Windows</a>(<a href="/index.php/VC_2008_Express%E4%B8%8B%E5%AE%89%E8%A3%85OpenCV2.0/2.1" title="VC 2008 Express下安装OpenCV2.0/2.1">安装文档</a>)
+</li><li><a href="http://www.opencv.org.cn/download/OpenCV-2.0.0.tar.bz2" class='external text' title="http://www.opencv.org.cn/download/OpenCV-2.0.0.tar.bz2" rel="nofollow">OpenCV for Linux</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=9" title="Download">编辑</a>]</div><a name="Version_1.2.0_.282.0_beta.29"></a><h2>Version 1.2.0 (2.0 beta)</h2>
+<ul><li><a href="http://www.opencv.org.cn/download/OpenCV-1.2.0-win32.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV-1.2.0-win32.exe" rel="nofollow">OpenCV for Windows</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=10" title="Download">编辑</a>]</div><a name="CVS_2007-06-27"></a><h2>CVS 2007-06-27</h2>
+<ul><li>2007年6月27日check out的<a href="/images/7/75/Opencv-cvs-20070627.zip" class='internal' title="Opencv-cvs-20070627.zip">CVS源码</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=11" title="Download">编辑</a>]</div><a name="Version_1.0"></a><h2>Version 1.0 </h2>
+<ul><li> <a href="http://www.opencv.org.cn/download/opencv-1.0.0.tar.gz" class='external text' title="http://www.opencv.org.cn/download/opencv-1.0.0.tar.gz" rel="nofollow">OpenCV for Linux</a>
+</li><li> <a href="http://www.opencv.org.cn/download/OpenCV_1.0.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV 1.0.exe" rel="nofollow">OpenCV for Windows</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=12" title="Download">编辑</a>]</div><a name="Version_1.0_rc1_.280.9.9.29"></a><h2>Version 1.0 rc1 (0.9.9)</h2>
+<ul><li> <a href="http://www.opencv.org.cn/download/opencv-0.9.9.tar.gz" class='external text' title="http://www.opencv.org.cn/download/opencv-0.9.9.tar.gz" rel="nofollow">OpenCV for Linux</a>
+</li><li> <a href="http://www.opencv.org.cn/download/OpenCV_1.0rc1.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV 1.0rc1.exe" rel="nofollow">OpenCV for Windows</a>
+</li><li> <a href="http://www.opencv.org.cn/download/opencv1.0rc1-py2.4.zip" class='external text' title="http://www.opencv.org.cn/download/opencv1.0rc1-py2.4.zip" rel="nofollow">OpenCV wrapper package for Python 2.4 (win)</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=13" title="Download">编辑</a>]</div><a name="Version_Beta_5_.280.9.7.29"></a><h2>Version Beta 5 (0.9.7)</h2>
+<ul><li> <a href="http://www.opencv.org.cn/download/opencv-0.9.7.tar.gz" class='external text' title="http://www.opencv.org.cn/download/opencv-0.9.7.tar.gz" rel="nofollow">OpenCV for Linux</a>
+</li><li> <a href="http://www.opencv.org.cn/download/OpenCV_b5a.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV b5a.exe" rel="nofollow">OpenCV for Windows</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=14" title="Download">编辑</a>]</div><a name="Version_Beta_4_.280.9.6.29"></a><h2>Version Beta 4 (0.9.6)</h2>
+<ul><li> <a href="http://www.opencv.org.cn/download/opencv-0.9.6.tar.gz" class='external text' title="http://www.opencv.org.cn/download/opencv-0.9.6.tar.gz" rel="nofollow">OpenCV for Linux</a>
+</li><li> <a href="http://www.opencv.org.cn/download/OpenCV_b4a.exe" class='external text' title="http://www.opencv.org.cn/download/OpenCV b4a.exe" rel="nofollow">OpenCV for Windows</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/index.php?title=Download&amp;action=edit&amp;section=15" title="Download">编辑</a>]</div><a name="chm.E6.A0.BC.E5.BC.8F.E6.96.87.E6.A1.A3"></a><h1>chm格式文档</h1>
+<ul><li> <a href="/images/c/c1/ICVL-2007-09-02.zip" class='internal' title="ICVL-2007-09-02.zip">chm格式中文文档</a> (<b>推荐</b>，fys2xxx制作，2007年9月2日)
+</li><li> <a href="/images/b/b0/OpenCV_Chinese_Manual.zip" class='internal' title="OpenCV Chinese Manual.zip">chm格式中文文档</a> (Earthric制作，2007年6月28日)
+</li><li> <a href="/images/e/e1/OpenCV_English_Manual.zip" class='internal' title="OpenCV English Manual.zip">chm格式英文文档</a> (Earthric制作)
+</li></ul>
+
+<!-- Saved in parser cache with key wiki_opencv:pcache:idhash:6448-0!1!0!0!!zh!2!zh and timestamp 20170413153318 -->
+<div class="printfooter">
+取自"<a href="http://wiki.opencv.org.cn/index.php/Download">http://wiki.opencv.org.cn/index.php/Download</a>"</div>
+	    	    <!-- end content -->
+	    <div class="visualClear"></div>
+	  </div>
+	</div>
+      </div>
+	<div id="p-cactions" class="portlet">
+	  <h5>Views</h5>
+	  <ul>
+	    <li id="ca-nstab-main"
+	       class="selected"	       ><a href="/index.php/Download">条目</a></li><li id="ca-talk"
+	       	       ><a href="/index.php/Talk:Download">讨论</a></li><li id="ca-edit"
+	       	       ><a href="/index.php?title=Download&amp;action=edit">编辑</a></li><li id="ca-history"
+	       	       ><a href="/index.php?title=Download&amp;action=history">History</a></li><li id="ca-varlang-0"
+	       class="selected"	       ><a href="/index.php?title=Download&amp;variant=zh">不转换</a></li><li id="ca-varlang-1"
+	       	       ><a href="/index.php?title=Download&amp;variant=zh-cn">简体</a></li><li id="ca-varlang-2"
+	       	       ><a href="/index.php?title=Download&amp;variant=zh-tw">繁体</a></li>	  </ul>
+	</div>
+      <div id="column-one">
+	<!--<div class="portlet" id="p-logo">
+	  <a style="background-image: url(/skins/common/images/wiki.png);"
+	    href="/index.php/%E9%A6%96%E9%A1%B5"
+	    title="首页"></a>
+	</div>-->
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-navigation'>
+	  <h5>导航</h5>
+	  <div class='pBody'>
+	    <ul>
+	    	      <li id="n-mainpage"><a href="/index.php/%E9%A6%96%E9%A1%B5">首页</a></li>
+	     	      <li id="n-currentevents"><a href="/index.php/Current_events">新闻动态</a></li>
+	     	      <li id="n-recentchanges"><a href="/index.php/Special:Recentchanges">最近更改</a></li>
+	     	      <li id="n-编辑帮助"><a href="/index.php/Wikipedia:%E5%B8%AE%E5%8A%A9">编辑帮助</a></li>
+	     	      <li id="n-关于本站"><a href="/index.php/OpenCV_China:Community_Portal">关于本站</a></li>
+	     	    </ul>
+	  </div>
+	</div>
+	        <!--
+	<div id="p-search" class="portlet">
+	  <h5><label for="searchInput">搜索</label></h5>
+	  <div class="pBody">
+	    <form name="searchform" action="/index.php/Special:Search" id="searchform">
+	      <input id="searchInput" name="search" type="text"
+	        accesskey="f" value="" />
+	      <input type='submit' name="go" class="searchButton" id="searchGoButton"
+	        value="进入"
+	        />&nbsp;<input type='submit' name="fulltext"
+	        class="searchButton"
+	        value="搜索" />
+	    </form>
+	  </div>
+	</div> -->
+<!--Google Adsense Begin-->
+<div class="portlet" id="p-personal">
+   <div class="pBody" align="center" style="background:#EDF2F2">
+<script type="text/javascript"><!--
+google_ad_client = "pub-4806133667566227";
+//125x125, 创建于 07-11-20
+google_ad_slot = "9321483465";
+google_ad_width = 125;
+google_ad_height = 125;
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+   </div>
+</div>
+<!--Google Adsense End-->
+	<div class="portlet" id="p-personal">
+	  <h5>Personal tools</h5>
+	  <div class="pBody">
+	    <ul>
+	     <li id="pt-login"><a href="/index.php?title=Special:Userlogin&amp;returnto=Download">用户登录</a></li>	
+			    </ul>
+	  </div>
+	</div>
+
+	<div class="portlet" id="p-tb">
+	  <h5>工具</h5>
+	  <div class="pBody">
+	    <ul>
+		  		  <li id="t-whatlinkshere"><a href="/index.php/Special:Whatlinkshere/Download">链入页面</a></li>
+		  		  <li id="t-recentchangeslinked"><a href="/index.php/Special:Recentchangeslinked/Download">链出更改</a></li>
+		                	      	      	      	      	      	      	      <li id="t-upload"><a href="/index.php/Special:Upload">上载文件</a></li>	      	      <li id="t-specialpages"><a href="/index.php/Special:Specialpages">特殊页面</a></li>	      	      	      <li id="t-print"><a href="/index.php?title=Download&amp;printable=yes">可打印版</a></li>
+	      	    </ul>
+	  </div>
+	</div>
+	      </div><!-- end of the left (by default at least) column -->
+      <div class="visualClear"></div>
+      <div id="footer">
+    <div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>	<div id="f-copyrightico"><a href="http://creativecommons.org/licenses/by/2.5/cn/"><img src="http://i.creativecommons.org/l/by/2.5/cn/88x31.png" alt='知识共享署名 2.5 中国大陆许可协议' /></a></div>	<ul id="f-list">
+	  <li id="f-lastmod"> 最后更改13:57 2013年3月18日.</li>	  <li id="f-viewcount">本页面已经被浏览961,260次。</li>          <li id="f-beian"><a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备07030420号</a></li> <br>
+	  	  	  <li id="f-copyright">Content is available under <a href="http://creativecommons.org/licenses/by/2.5/cn/" class='external ' title="http://creativecommons.org/licenses/by/2.5/cn/" rel="nofollow">知识共享署名 2.5 中国大陆许可协议</a>.</li>	  <li id="f-about"><a href="/index.php/Wikipedia:%E5%85%B3%E4%BA%8E" title="Wikipedia:关于">关于Wikipedia</a></li>	  <li id="f-disclaimer"><a href="/index.php/OpenCV_China:General_disclaimer" title="OpenCV China:General disclaimer">Disclaimers</a></li>	  	</ul>
+	<ul id="f-list">
+	<font size="+1">本网站由<a href="http://www.boanying.com/2146.html" target="_blank">深圳市博安盈科技有限公司</a>赞助主机和网络。</font>
+	</ul>
+      </div>
+    </div>
+    <!-- Served by debian in 0.14 secs. --><!--Google analytics begin-->
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-253584-3";
+urchinTracker();
+</script>
+<!--Google analytics end-->
+  </body>
+</html>
