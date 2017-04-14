@@ -13,21 +13,22 @@ for i in characters:
 print(chars)
 
 width, height, n_len, n_class = 130, 53, 4, len(chars)
-path = os.getcwd() + '/sample3'
-print path
+trainpath = os.getcwd() + '/sample3'
+testpath = os.getcwd() + '/test'
+print trainpath
 
-root, dirs, files = os.walk(path).next()
+trainroot, traindirs, trainfiles = os.walk(trainpath).next()
+testroot, testdirs, testfiles = os.walk(testpath).next()
 
 def getAllImages(root, files):
     X = np.zeros((height, width, 1), dtype=np.uint8)
-    y = []
     for i, j in enumerate(files):
         #X[i] = cv2.imread(root+'/'+j)
         img = cv2.imread(root+'/'+j)
         blur = cv2.bilateralFilter(img, 9, 75, 75)
         grayimg = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         X = grayimg.reshape((height, width, 1))
-        y.append(j[:4])
+        y = j[:4]
         yield X, y
 
 def gen(root, files, batch_size=8):
@@ -79,15 +80,15 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adadelta',
               metrics=['accuracy'])
 
-model.fit_generator(gen(root, files), steps_per_epoch=2000, epochs=300,
-                    validation_data=gen(root, files), validation_steps=50)
+model.fit_generator(gen(trainroot, trainfiles), steps_per_epoch=2000, epochs=300,
+                    validation_data=gen(testroot, testfiles), validation_steps=50)
 
 model.save('mycnn.h5')
 
 from tqdm import tqdm
 def evaluate(model, batch_num=20):
     batch_acc = 0
-    generator = gen(root, files)
+    generator = gen(testroot, testfiles)
     for i in tqdm(range(batch_num)):
         X, y = generator.next()
         y_pred = model.predict(X)
