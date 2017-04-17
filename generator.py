@@ -130,33 +130,7 @@ def captcha_draw(size_im, nb_cha, set_cha, fonts=None, overlap=0.1,
             
     return np.asarray(im), contents
 
-
-#----------------------------------------------------------------------
-def captcha_save(*args, **kwargs):
-    
-    img, contents = captcha_draw(*args, **kwargs)
-    im = Image.fromarray(np.uint8(img))
-    
-    dir_path = kwargs['dir_path']
-    
-    if os.path.exists(dir_path) == False: # 如果文件夹不存在，则创建对应的文件夹
-        os.makedirs(dir_path)
-        pic_id = 1
-    else:
-        pic_names = map(lambda x: x.split('.')[0], os.listdir(dir_path))
-        pic_names.remove('label')
-        pic_id = max(map(int, pic_names))+1 # 找到所有图片的最大标号，方便命名
-
-    img_name = str(pic_id) + '.jpg'
-    img_path = dir_path + img_name
-    label_path = dir_path + 'label.txt'
-    with open(label_path, 'a') as f:
-        f.write(''.join(contents)+'\n') # 在label文件末尾添加新图片的text内容
-    print img_path
-    im.save(img_path)
-    
-
-def captcha_generator():
+def captcha_generator(save=False):
     size_im = (140, 44)
     overlaps = [0.0, 0.3, 0.6]
     rd_text_poss = [True, True]
@@ -187,10 +161,27 @@ def captcha_generator():
             font_path = random.choice(font_paths)
             dir_name = 'all'
             dir_path = 'img_data/'+dir_name+'/'
-            captcha_save(size_im=size_im, nb_cha=nb_cha, set_cha=set_cha, 
-                overlap=overlap, rd_text_pos=rd_text_pos, rd_text_size=False, 
-                rd_text_color=rd_text_color, rd_bg_color=rd_bg_color, noise=noise, 
-                rotate=rotate, dir_path=dir_path, fonts=font_path)
+            im, contents = captcha_draw(size_im=size_im, nb_cha=nb_cha, set_cha=set_cha, 
+                                        overlap=overlap, rd_text_pos=rd_text_pos, rd_text_size=False, 
+                                        rd_text_color=rd_text_color, rd_bg_color=rd_bg_color, noise=noise, 
+                                        rotate=rotate, dir_path=dir_path, fonts=font_path)
+            if save:
+                if os.path.exists(dir_path) == False: # 如果文件夹不存在，则创建对应的文件夹
+                    os.makedirs(dir_path)
+                    pic_id = 1
+                else:
+                    pic_names = map(lambda x: x.split('.')[0], os.listdir(dir_path))
+                    pic_names.remove('label')
+                    pic_id = max(map(int, pic_names))+1 # 找到所有图片的最大标号，方便命名
+            
+                img_name = str(pic_id) + '.jpg'
+                img_path = dir_path + img_name
+                label_path = dir_path + 'label.txt'
+                with open(label_path, 'a') as f:
+                    f.write(''.join(contents)+'\n') # 在label文件末尾添加新图片的text内容
+                print img_path
+                img = Image.fromarray(np.uint8(im))
+                img.save(img_path)                
 
 #def test():
     #size_im = (140, 44) # width, height
@@ -219,4 +210,4 @@ def captcha_generator():
 
 if __name__ == "__main__":
     # test()
-    captcha_generator()
+    captcha_generator(True)
