@@ -5,7 +5,7 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-path = os.getcwd() + '/sample4'
+path = os.getcwd() + '/test'
 print path
 
 def extendBoard(img, axis, b, count):

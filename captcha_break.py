@@ -13,8 +13,8 @@ for i in characters:
 print(chars)
 
 width, height, n_len, n_class = 130, 53, 4, len(chars)
-trainpath = os.getcwd() + '/sample3'
-testpath = os.getcwd() + '/test'
+trainpath = '/home/gtest/captcha_break/sample4'
+testpath = '/home/gtest/captcha_break/test'
 print trainpath
 
 trainroot, traindirs, trainfiles = os.walk(trainpath).next()
@@ -80,8 +80,8 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adadelta',
               metrics=['accuracy'])
 
-model.fit_generator(gen(trainroot, trainfiles), steps_per_epoch=2000, epochs=300,
-                    validation_data=gen(testroot, testfiles), validation_steps=50)
+model.fit_generator(gen(trainroot, trainfiles), steps_per_epoch=50000, epochs=50,
+                    validation_data=gen(testroot, testfiles), validation_steps=2000)
 
 model.save('mycnn.h5')
 
