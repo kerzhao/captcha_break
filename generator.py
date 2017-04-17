@@ -177,10 +177,32 @@ def captcha_generator(width,
                 y[j][i, :] = 0
                 y[j][i, set_cha.find(ch)] = 1
         yield X, y   
+        
+#----------------------------------------------------------------------
+def captcha_save():
+    """"""
+    a = captcha_generator(144, 40)
+    dir_path = 'img_data/all/'
+    X, y = a.next()
+    for x in X:
+        if os.path.exists(dir_path) == False: # 如果文件夹不存在，则创建对应的文件夹
+            os.makedirs(dir_path)
+            pic_id = 1
+        else:
+            pic_names = map(lambda x: x.split('.')[0], os.listdir(dir_path))
+            #pic_names.remove('label')
+            pic_id = max(map(int, pic_names))+1 # 找到所有图片的最大标号，方便命名
+    
+        img_name = str(pic_id) + '.jpg'
+        img_path = dir_path + img_name
+        label_path = dir_path + 'label.txt'
+        #with open(label_path, 'a') as f:
+            #f.write(''.join(pic_id)+'\n') # 在label文件末尾添加新图片的text内容
+        print img_path
+        img = Image.fromarray(np.uint8(x))
+        img.save(img_path)            
 
 if __name__ == "__main__":
     # test()
     #captcha_generator(140, 44)
-    a = captcha_generator(140, 44)
-    x, y = a.next()
-    x, y = a.next()
+    captcha_save()
