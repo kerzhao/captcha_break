@@ -130,31 +130,37 @@ def captcha_draw(size_im, nb_cha, set_cha, fonts=None, overlap=0.1,
             
     return np.asarray(im), contents
 
-def captcha_generator(save=False):
-    size_im = (140, 44)
+def captcha_generator(width, 
+                      height, 
+                      batch_size=32,
+                      set_cha="ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy1234567890"
+                      ):
+    size_im = (width, height)
     overlaps = [0.0, 0.3, 0.6]
     rd_text_poss = [True, True]
     rd_text_sizes = [True, True]
     rd_text_colors = [True, True] # false 代表字体颜色全一致，但都是黑色
     rd_bg_color = True 
-    set_chas = ["ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy12345678901234567890"]
     noises = [['line', 'point', 'sin']]
     rotates = [True, True]
     nb_chas = [4, 6]
-    nb_image = 50000
     font_dir = 'fonts/english'
     font_paths = []
     for dirpath, dirnames, filenames in os.walk(font_dir):
         for filename in filenames:
             filepath = dirpath + os.sep + filename
             font_paths.append({'eng':filepath})
-
-        for i in range(nb_image):
+            
+    n_len = 6
+    n_class = len(set_cha)
+    X = np.zeros((batch_size, height, width, 3), dtype=np.uint8)
+    y = [np.zeros((batch_size, n_class), dtype=np.uint8) for i in range(n_len)]    
+    while True:
+        for i in range(batch_size):
             overlap = random.choice(overlaps)
             rd_text_pos = random.choice(rd_text_poss)
             rd_text_size = random.choice(rd_text_sizes)
             rd_text_color = random.choice(rd_text_colors)
-            set_cha = random.choice(set_chas)
             noise = random.choice(noises)
             rotate = random.choice(rotates)
             nb_cha = 6
@@ -165,49 +171,16 @@ def captcha_generator(save=False):
                                         overlap=overlap, rd_text_pos=rd_text_pos, rd_text_size=False, 
                                         rd_text_color=rd_text_color, rd_bg_color=rd_bg_color, noise=noise, 
                                         rotate=rotate, dir_path=dir_path, fonts=font_path)
-            if save:
-                if os.path.exists(dir_path) == False: # 如果文件夹不存在，则创建对应的文件夹
-                    os.makedirs(dir_path)
-                    pic_id = 1
-                else:
-                    pic_names = map(lambda x: x.split('.')[0], os.listdir(dir_path))
-                    pic_names.remove('label')
-                    pic_id = max(map(int, pic_names))+1 # 找到所有图片的最大标号，方便命名
-            
-                img_name = str(pic_id) + '.jpg'
-                img_path = dir_path + img_name
-                label_path = dir_path + 'label.txt'
-                with open(label_path, 'a') as f:
-                    f.write(''.join(contents)+'\n') # 在label文件末尾添加新图片的text内容
-                print img_path
-                img = Image.fromarray(np.uint8(im))
-                img.save(img_path)                
-
-#def test():
-    #size_im = (140, 44) # width, height
-    #set_cha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy1234567890" # 字符集
-    #nb_image = 3 # 生成图片数
-    #font_dir = 'fonts/english'
-    #fonts_path = []
-    #for dirpath, dirnames, filenames in os.walk(font_dir):
-        #for filename in filenames:
-            #filepath = dirpath + os.sep + filename
-            #fonts_path.append(filepath)
-    #for i in range(nb_image):
-        #for font_path in fonts_path:
-            ##nb_cha = random.choice([4, 6]) # 图片字符个数
-            #nb_cha = 6
-            #captcha_draw(size_im=size_im, nb_cha=nb_cha, set_cha=set_cha, 
-                #overlap=0.3, 
-                #rd_text_pos=True, 
-                #rd_text_size=True,
-                #rd_text_color=True,
-                #rd_bg_color=True,
-                #noise=['line', 'point'],
-                #rotate=True,
-                #dir_path='img_data/tmp/',
-                #fonts={'eng':font_path})
+            contents = ''.join(contents)
+            X[i] = im
+            for j, ch in enumerate(contents):
+                y[j][i, :] = 0
+                y[j][i, set_cha.find(ch)] = 1
+        yield X, y   
 
 if __name__ == "__main__":
     # test()
-    captcha_generator(True)
+    #captcha_generator(140, 44)
+    a = captcha_generator(140, 44)
+    x, y = a.next()
+    x, y = a.next()
