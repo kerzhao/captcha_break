@@ -8,7 +8,7 @@ from keras.models import *
 from keras.layers import *
 
 chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy1234567890"
-width, height, n_len, n_class = 144, 40, 6, len(chars)
+width, height, n_len, n_class = 140, 43, 6, len(chars)
 
 input_tensor = Input((height, width, 3))
 x = input_tensor
@@ -46,7 +46,7 @@ model.save('mycnn_v20170417.h5')
 from tqdm import tqdm
 def evaluate(model, batch_num=20):
     batch_acc = 0
-    generator = gen(testroot, testfiles)
+    generator = gen(width=width, height=height)
     for i in tqdm(range(batch_num)):
         X, y = generator.next()
         y_pred = model.predict(X)

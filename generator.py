@@ -181,7 +181,7 @@ def captcha_generator(width,
 #----------------------------------------------------------------------
 def captcha_save():
     """"""
-    a = captcha_generator(144, 40)
+    a = captcha_generator(140, 44)
     dir_path = 'img_data/all/'
     X, y = a.next()
     for x in X:
@@ -205,4 +205,5 @@ def captcha_save():
 if __name__ == "__main__":
     # test()
     #captcha_generator(140, 44)
-    captcha_save()
+    for _ in range(100):
+        captcha_save()
