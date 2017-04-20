@@ -44,10 +44,10 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adadelta',
               metrics=['accuracy'])
 
-model.fit_generator(gen(width=width, height=height), steps_per_epoch=50000, epochs=5,
-                    validation_data=gen(width=width, height=height), validation_steps=2000)
+model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=200,
+                    validation_data=gen(width=width, height=height), validation_steps=1000)
 
-model.save('mycnn_v20170418.h5')
+model.save('mycnn_v20170420.h5')
 
 from tqdm import tqdm
 def evaluate(model, batch_num=20):
