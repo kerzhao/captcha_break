@@ -41,7 +41,7 @@ x = [Dense(n_class, activation='softmax', name='c%d'%(i+1))(x) for i in range(n_
 model = Model(inputs=input_tensor, outputs=x)
 
 model.compile(loss='categorical_crossentropy',
-              optimizer='adagrad',
+              optimizer='rmsprop',
               metrics=['accuracy'])
 
 model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=5, 
