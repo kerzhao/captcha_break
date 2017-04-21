@@ -41,13 +41,13 @@ x = [Dense(n_class, activation='softmax', name='c%d'%(i+1))(x) for i in range(n_
 model = Model(inputs=input_tensor, outputs=x)
 
 model.compile(loss='categorical_crossentropy',
-              optimizer='adadelta',
+              optimizer='adagrad',
               metrics=['accuracy'])
 
-model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=200,
+model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=5,
                     validation_data=gen(width=width, height=height), validation_steps=500)
 
-model.save('mycnn_v20170421.h5')
+model.save('mycnn_v20170421_adagrad.h5')
 
 from tqdm import tqdm
 def evaluate(model, batch_num=20):
