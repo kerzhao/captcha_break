@@ -47,12 +47,14 @@ def make_model(nb_conv, nb_pool, optimizer):
 my_classifier = KerasClassifier(make_model, batch_size=32)
 print 'create 60000 train samples'
 print 'start at ', datetime.now()
-X_train, y_train = gen(width, height, batch_size=60000)
+traingen = gen(width, height, batch_size=60000)
+X_train, y_train = traingen.next()
 print 'create 60000 train samples'
 print 'end at ', datetime.now()
 print 'create 10000 test samples'
 print 'start at ', datetime.now()
-X_test, y_test = gen(width, height, batch_size=10000)
+testgen = gen(width, height, batch_size=10000)
+X_test, y_test = testgen.next()
 print 'create 10000 test samples'
 print 'end at ', datetime.now()
 
