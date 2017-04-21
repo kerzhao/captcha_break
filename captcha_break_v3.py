@@ -5,7 +5,7 @@ import os
 import numpy as np
 import random
 from datetime import datetime
-from generator import captcha_generator as gen
+from generator import captcha_generator_v3 as gen
         
 from keras.models import *
 from keras.layers import *
@@ -16,7 +16,7 @@ chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy1234567890"
 width, height, n_len, n_class = 140, 43, 6, len(chars)
 
 #----------------------------------------------------------------------
-def make_model(nb_conv, nb_pool, optimizer):
+def make_model(nb_conv, nb_pool, optimizer='sgd'):
     """"""
     input_tensor = Input((height, width, 3))
     x = input_tensor
@@ -47,13 +47,13 @@ def make_model(nb_conv, nb_pool, optimizer):
 my_classifier = KerasClassifier(make_model, batch_size=32)
 print 'create 60000 train samples'
 print 'start at ', datetime.now()
-traingen = gen(width, height, batch_size=60000)
+traingen = gen(width, height, batch_size=320)
 X_train, y_train = traingen.next()
 print 'create 60000 train samples'
 print 'end at ', datetime.now()
 print 'create 10000 test samples'
 print 'start at ', datetime.now()
-testgen = gen(width, height, batch_size=10000)
+testgen = gen(width, height, batch_size=64)
 X_test, y_test = testgen.next()
 print 'create 10000 test samples'
 print 'end at ', datetime.now()
@@ -64,16 +64,17 @@ validator = GridSearchCV(my_classifier,
                                      'nb_epoch': [3, 6],
                                      'nb_conv': [3],
                                      'nb_pool': [2],
-                                     'optimizer': ['sgd', 
-                                                   'rmsprop', 
-                                                   'adagrad',
-                                                   'adadelta',
-                                                   'adam',
-                                                   'adamax',
-                                                   'nadam']},
+                                     #'optimizer': ['sgd', 
+                                                   #'rmsprop', 
+                                                   #'adagrad',
+                                                   #'adadelta',
+                                                   #'adam',
+                                                   #'adamax',
+                                                   #'nadam']
+                                                   },
                          scoring='neg_log_loss',
-                         n_jobs=4)
-validator.fit(X_train, y_train)
+                         n_jobs=1)
+validator.fit(X_train, np.array(y_train))
 
 print('The parameters of the best model are: ')
 print(validator.best_params_)

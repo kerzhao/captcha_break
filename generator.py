@@ -176,6 +176,54 @@ def captcha_generator(width,
             for j, ch in enumerate(contents):
                 y[j][i, :] = 0
                 y[j][i, set_cha.find(ch)] = 1
+        yield X, y
+
+def captcha_generator_v3(width, 
+                      height, 
+                      batch_size=32,
+                      set_cha="ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy1234567890"
+                      ):
+    size_im = (width, height)
+    overlaps = [0.0, 0.3, 0.6]
+    rd_text_poss = [True, True]
+    rd_text_sizes = [True, True]
+    rd_text_colors = [True, True] # false 代表字体颜色全一致，但都是黑色
+    rd_bg_color = True 
+    noises = [['line', 'point', 'sin']]
+    rotates = [True, True]
+    nb_chas = [4, 6]
+    font_dir = 'fonts/english'
+    font_paths = []
+    for dirpath, dirnames, filenames in os.walk(font_dir):
+        for filename in filenames:
+            filepath = dirpath + os.sep + filename
+            font_paths.append({'eng':filepath})
+            
+    n_len = 6
+    n_class = len(set_cha)
+    X = np.zeros((batch_size, height, width, 3), dtype=np.uint8)
+    y = np.zeros((batch_size, n_len, n_class), dtype=np.uint8)   
+    while True:
+        for i in range(batch_size):
+            overlap = random.choice(overlaps)
+            rd_text_pos = random.choice(rd_text_poss)
+            rd_text_size = random.choice(rd_text_sizes)
+            rd_text_color = random.choice(rd_text_colors)
+            noise = random.choice(noises)
+            rotate = random.choice(rotates)
+            nb_cha = 6
+            font_path = random.choice(font_paths)
+            dir_name = 'all'
+            dir_path = 'img_data/'+dir_name+'/'
+            im, contents = captcha_draw(size_im=size_im, nb_cha=nb_cha, set_cha=set_cha, 
+                                        overlap=overlap, rd_text_pos=rd_text_pos, rd_text_size=False, 
+                                        rd_text_color=rd_text_color, rd_bg_color=rd_bg_color, noise=noise, 
+                                        rotate=rotate, dir_path=dir_path, fonts=font_path)
+            contents = ''.join(contents)
+            X[i] = im
+            for j, ch in enumerate(contents):
+                y[i][:, :] = 0
+                y[i][j, set_cha.find(ch)] = 1
         yield X, y   
         
 #----------------------------------------------------------------------
