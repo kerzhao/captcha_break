@@ -42,7 +42,7 @@ x = Dropout(0.25)(x)
 x = [Dense(n_class, activation='softmax', name='c%d'%(i+1))(x) for i in range(n_len)]
 model = Model(inputs=input_tensor, outputs=x)
 
-sgd = optimizers.SGD(lr=0.1, decay=1e-2, momentum=0.9)
+sgd = optimizers.SGD(lr=0.01, decay=1e-2, momentum=0.9)
 
 model.compile(loss='categorical_crossentropy',
               optimizer=sgd,
