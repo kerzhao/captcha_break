@@ -134,7 +134,7 @@ def captcha_draw(size_im, nb_cha, set_cha, fonts=None, overlap=0.1,
 
 def captcha_generator(width, 
                       height, 
-                      batch_size=32,
+                      batch_size=64,
                       set_cha="ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy1234567890"
                       ):
     size_im = (width, height)
