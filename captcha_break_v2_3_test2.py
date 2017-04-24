@@ -13,8 +13,8 @@ width, height, n_len, n_class = 250, 80, 6, len(chars)
 input_tensor = Input((height, width, 3))
 x = input_tensor
 for i in range(4):
-    x = Convolution2D(32*2**i, (3, 3), activation='relu')(x)
-    x = Convolution2D(32*2**i, (3, 3), activation='relu')(x)
+    x = Conv2D(32*2**i, (3, 3), activation='relu')(x)
+    x = Conv2D(32*2**i, (3, 3), activation='relu')(x)
     x = MaxPooling2D((2, 2))(x)
 
 x = Flatten()(x)
