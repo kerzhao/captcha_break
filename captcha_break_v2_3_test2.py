@@ -20,7 +20,7 @@ for i in range(4):
 x = Flatten()(x)
 x = Dropout(0.25)(x)
 x = [Dense(n_class, activation='softmax', name='c%d'%(i+1))(x) for i in range(6)]
-model = Model(input=input_tensor, output=x)
+model = Model(input=input_tensor, outputs=x)
 
 model.compile(loss='categorical_crossentropy',
               optimizer='adadelta',
