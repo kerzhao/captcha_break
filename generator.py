@@ -143,7 +143,7 @@ def captcha_generator(width,
     rd_text_sizes = [True, True]
     rd_text_colors = [True, True] # false 代表字体颜色全一致，但都是黑色
     rd_bg_color = True 
-    noises = [['line', 'point']]
+    noises = [['line', 'point', 'sin']]
     rotates = [True, True]
     nb_chas = [4, 6]
     font_dir = 'fonts/english'
