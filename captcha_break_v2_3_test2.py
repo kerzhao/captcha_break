@@ -17,18 +17,18 @@ def gen(batch_size=32):
     generator = ImageCaptcha(width=width, height=height)
     while True:
         for i in range(batch_size):
-            random_str = ''.join([random.choice(characters) for j in range(6)])
+            random_str = ''.join([random.choice(chars) for j in range(6)])
             X[i] = generator.generate_image(random_str)
             for j, ch in enumerate(random_str):
                 y[j][i, :] = 0
-                y[j][i, characters.find(ch)] = 1
+                y[j][i, chars.find(ch)] = 1
         yield X, y
 
 input_tensor = Input((height, width, 3))
 x = input_tensor
 for i in range(4):
-    x = Convolution2D(32*2**i, 3, 3, activation='relu')(x)
-    x = Convolution2D(32*2**i, 3, 3, activation='relu')(x)
+    x = Conv2D(32*2**i, 3, 3, activation='relu')(x)
+    x = Conv2D(32*2**i, 3, 3, activation='relu')(x)
     x = MaxPooling2D((2, 2))(x)
 
 x = Flatten()(x)
