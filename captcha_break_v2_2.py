@@ -42,17 +42,17 @@ x = Dropout(0.25)(x)
 x = [Dense(n_class, activation='softmax', name='c%d'%(i+1))(x) for i in range(n_len)]
 model = Model(inputs=input_tensor, outputs=x)
 
-sgd = optimizers.SGD(lr=0.1, decay=1e-2, momentum=0.9)
+#sgd = optimizers.SGD(lr=0.1, decay=1e-2, momentum=0.9)
 
 model.compile(loss='categorical_crossentropy',
-              optimizer=sgd,
+              optimizer='adadelta',
               metrics=['accuracy'])
 
 model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=20, 
                     validation_data=gen(width=width, height=height), validation_steps=500)
 
-model.save('mycnn_v20170424_sgd.h5')
-print 'saved mycnn_v20170424_sgd.h5'
+model.save('mycnn_v20170424_adadelta.h5')
+print 'saved mycnn_v20170424_adadelta.h5'
 
 from tqdm import tqdm
 def evaluate(model, batch_num=20):
