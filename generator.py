@@ -103,12 +103,14 @@ def captcha_draw(size_im, nb_cha, set_cha, fonts=None, overlap=0.1,
             y = random.randint(0, height_im)
             drawer.point(xy=(x, y), fill=color_point)
     if 'sin' in noise:
+        img = np.asarray(im)
         color_sine = randRGB()
         x = np.arange(0, width_im)
         y = sin(x, height_im)
         for k in range(4):
             for i, j in zip(x, y+k):
-                drawer.point(xy=(i, j), fill=color_sine)
+                if j >= 0 and j < height_im and all(img[j, i]==bg_color):
+                    drawer.point(xy=(i, j), fill=color_sine)
     if 'line' in noise:
         nb_line = 10
         for i in range(nb_line):
