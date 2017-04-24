@@ -18,23 +18,23 @@ x = input_tensor
     #x = MaxPooling2D((2, 2))(x)
 
 #x = Conv2D(32, (5, 5), activation='relu')(x)
-x = Conv2D(32, (3, 3), border_mode='same', activation='relu')(x)
-x = Conv2D(32, (3, 3), border_mode='same', activation='relu')(x)
+x = Conv2D(32, (3, 3), padding='same', activation='relu')(x)
+x = Conv2D(32, (3, 3), padding='same', activation='relu')(x)
 x = MaxPooling2D((2, 2))(x)
 
 #x = Conv2D(64, (5, 5), activation='relu')(x)
-x = Conv2D(64, (3, 3), border_mode='same', activation='relu')(x)
-x = Conv2D(64, (3, 3), border_mode='same', activation='relu')(x)
+x = Conv2D(64, (3, 3), padding='same', activation='relu')(x)
+x = Conv2D(64, (3, 3), padding='same', activation='relu')(x)
 x = MaxPooling2D((2, 2))(x)
 
 #x = Conv2D(128, (5, 5), activation='relu')(x)
-x = Conv2D(128, (3, 3), border_mode='same', activation='relu')(x)
-x = Conv2D(128, (3, 3), border_mode='same', activation='relu')(x)
+x = Conv2D(128, (3, 3), padding='same', activation='relu')(x)
+x = Conv2D(128, (3, 3), padding='same', activation='relu')(x)
 x = MaxPooling2D((2, 2))(x)
 
 #x = Conv2D(256, (3, 3), activation='relu')(x)
-x = Conv2D(256, (3, 3), border_mode='same', activation='relu')(x)
-x = Conv2D(256, (3, 3), border_mode='same', activation='relu')(x)
+x = Conv2D(256, (3, 3), padding='same', activation='relu')(x)
+x = Conv2D(256, (3, 3), padding='same', activation='relu')(x)
 x = MaxPooling2D((2, 2))(x)
 
 x = Flatten()(x)
