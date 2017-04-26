@@ -39,7 +39,7 @@ def sin(x, height):
     return np.array(map(int, height / d * (np.sin((x+c)/a) + b)))
 
 def randRGB():
-    return (random.randint(0, 150), random.randint(0, 150), random.randint(0, 150))
+    return (random.randint(50, 100), random.randint(50, 100), random.randint(50, 100))
 
 def cha_draw(cha, text_color, font, rotate,size_cha):
     im = Image.new(mode='RGBA', size=(size_cha*2, size_cha*2))
@@ -79,7 +79,7 @@ def captcha_draw(size_im, nb_cha, set_cha, fonts=None, overlap=0.1,
     
     #if rd_bg_color:
         #bg_color = randRGB()
-    bg_color = (random.randint(159, 181), random.randint(159, 181), random.randint(159, 181))
+    bg_color = (random.randint(198, 203), random.randint(198, 203), random.randint(198, 203))
     im = Image.new(mode='RGB', size=size_im, color=bg_color) # color 背景颜色，size 图片大小
 
     drawer = ImageDraw.Draw(im)
@@ -148,7 +148,7 @@ def captcha_generator(width,
     rd_text_sizes = [True, True]
     rd_text_colors = [True, True] # false 代表字体颜色全一致，但都是黑色
     rd_bg_color = True 
-    noises = [['line', 'point']]
+    noises = [['line', 'point', 'sin']]
     rotates = [True, True]
     nb_chas = [4, 6]
     font_dir = 'fonts/english'
