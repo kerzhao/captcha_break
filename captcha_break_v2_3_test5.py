@@ -44,4 +44,4 @@ def evaluate(model, batch_num=20):
         batch_acc += np.mean(map(np.array_equal, np.argmax(y, axis=2).T, np.argmax(y_pred, axis=2).T))
     return batch_acc / batch_num
 
-evaluate(model)
+print evaluate(model)
