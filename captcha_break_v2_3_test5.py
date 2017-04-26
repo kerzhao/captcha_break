@@ -28,11 +28,8 @@ model.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 
-<<<<<<< HEAD
-model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=20, 
-=======
+
 model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=30, 
->>>>>>> add61be30f19288ab44d81a3ecdbbe4e8cd20ea7
                     validation_data=gen(width=width, height=height), validation_steps=500)
 
 model.save('mycnn_v20170426_adadelta.h5')
