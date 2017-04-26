@@ -23,6 +23,11 @@ import numpy as np
 11 字符扭曲
 12 噪音（点、线段、圈）
 """
+chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy"
+
+def decode(y):
+    y = np.argmax(np.array(y), axis=2)[:,0]
+    return ''.join([chars[x] for x in y])
 
 #----------------------------------------------------------------------
 def sin(x, height):
@@ -135,7 +140,7 @@ def captcha_draw(size_im, nb_cha, set_cha, fonts=None, overlap=0.1,
 def captcha_generator(width, 
                       height, 
                       batch_size=64,
-                      set_cha="ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy1234567890"
+                      set_cha=chars
                       ):
     size_im = (width, height)
     overlaps = [0.0, 0.3, 0.6]
