@@ -23,7 +23,7 @@ import numpy as np
 11 字符扭曲
 12 噪音（点、线段、圈）
 """
-chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy1234567890"
+chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy"
 
 def decode(y):
     y = np.argmax(np.array(y), axis=2)[:,0]
