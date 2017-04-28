@@ -6,6 +6,7 @@ from generator_v7 import captcha_generator as gen
         
 from keras.models import *
 from keras.layers import *
+from keras import callbacks
 
 chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabdefghijlmnqrtuwxy"
 width, height, n_len, n_class = 140, 44, 6, len(chars)
@@ -27,10 +28,14 @@ model.compile(loss='categorical_crossentropy',
               optimizer='adadelta',
               metrics=['accuracy'])
 
-
+cbs = callbacks.TensorBoard(log_dir='./graph', 
+                            histogram_freq=0, 
+                            write_graph=True, 
+                            write_images=True)
 
 model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=10, 
-                    validation_data=gen(width=width, height=height), validation_steps=500)
+                    validation_data=gen(width=width, height=height), validation_steps=500,
+                    callbacks=[cbs])
 
 model.save('mycnn_v201704271006_v7_adadelta.h5')
 print 'saved mycnn_v201704271006_v7_adadelta.h5'
