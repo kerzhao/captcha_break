@@ -32,8 +32,8 @@ model.compile(loss='categorical_crossentropy',
 model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=10, 
                     validation_data=gen(width=width, height=height), validation_steps=500)
 
-model.save('mycnn_v201704271006_v6_adadelta.h5')
-print 'saved mycnn_v201704271006_v6_adadelta.h5'
+model.save('mycnn_v201704271006_v7_adadelta.h5')
+print 'saved mycnn_v201704271006_v7_adadelta.h5'
 
 from tqdm import tqdm
 def evaluate(model, batch_num=20):
