@@ -29,7 +29,7 @@ model.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 cbs = callbacks.TensorBoard(log_dir='./graph', 
-                            histogram_freq=0, 
+                            histogram_freq=1, 
                             write_graph=True, 
                             write_images=True)
 
