@@ -33,7 +33,7 @@ cbs = callbacks.TensorBoard(log_dir='./graph',
                             write_graph=True, 
                             write_images=True)
 
-model.fit_generator(gen(width=width, height=height), steps_per_epoch=2000, epochs=40, 
+model.fit_generator(gen(width=width, height=height), steps_per_epoch=3000, epochs=25, 
                     validation_data=gen(width=width, height=height), validation_steps=500,
                     callbacks=[cbs])
 
