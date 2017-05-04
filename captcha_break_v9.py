@@ -2,7 +2,7 @@ import cv2
 import os
 import numpy as np
 import random
-from generator_v8 import captcha_generator as gen
+from generator_v9 import captcha_generator as gen
 
 from keras.models import *
 from keras.layers import *
@@ -33,7 +33,7 @@ cbs = callbacks.TensorBoard(log_dir='./graph',
                             write_graph=True, 
                             write_images=True)
 
-model.fit_generator(gen(width=width, height=height), steps_per_epoch=3000, epochs=25, 
+model.fit_generator(gen(width=width, height=height), steps_per_epoch=3000, epochs=32, 
                     validation_data=gen(width=width, height=height), validation_steps=500,
                     callbacks=[cbs])
 
